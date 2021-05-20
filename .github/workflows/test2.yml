@@ -22,4 +22,4 @@ jobs:
 
       # a command which never finishes.
       - name: Run a one-line script
-        run: watch -n1 date
+        run: 'yes'
