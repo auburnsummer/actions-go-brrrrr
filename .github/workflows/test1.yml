@@ -24,7 +24,12 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-
+      
+      # Preseed agreement to the Steam Licence Agreement
+      - name: Preseed agreement to Steam Licence Agreement
+        run: |
+          echo steam steam/question select "I AGREE" | sudo debconf-set-selections
+          echo steam steam/license note '' | sudo debconf-set-selections
       # Install SteamCMD, will this really work??
       - name: Install SteamCMD!
         run: |
