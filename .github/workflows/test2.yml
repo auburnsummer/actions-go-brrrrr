@@ -22,4 +22,4 @@ jobs:
       # a command which never finishes.
       - name: Run a one-line script
         timeout-minutes: 1
-        run: 'yes'
+        run: timeout 5s yes
