@@ -18,8 +18,10 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+      
+      - name: Setup Python
+        uses: actions/setup-python@v2.2.2
 
       # a command which never finishes.
       - name: Run a one-line script
-        timeout-minutes: 1
-        run: timeout 5s yes
+        run: timeout 5s python ./forever.py
