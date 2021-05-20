@@ -21,7 +21,12 @@ jobs:
       
       - name: Setup Python
         uses: actions/setup-python@v2.2.2
+        with:
+          python-version: 3.x
+          
+      - name: Print out the version
+        run: python --version
 
       # a command which never finishes.
       - name: Run a one-line script
-        run: timeout 5s python ./forever.py
+        run: timeout 30s python ./forever.py
