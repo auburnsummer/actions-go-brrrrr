@@ -4,6 +4,9 @@ name: checking actions behaviour on time limits
 
 # Controls when the action will run. 
 on:
+  push:
+    branches:
+      - main
   # Only manually, we really don't want to make this one happen too much
   workflow_dispatch:
 
