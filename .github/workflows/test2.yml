@@ -29,4 +29,4 @@ jobs:
 
       # a command which never finishes.
       - name: Run a one-line script
-        run: timeout --foreground 30s python ./forever.py
+        run: python ./forever.py
