@@ -32,4 +32,4 @@ jobs:
 
       # a command which never finishes.
       - name: Run a one-line script
-        run: python ./forever.py
+        run: timeout 10s python ./forever.py
