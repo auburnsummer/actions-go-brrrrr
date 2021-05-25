@@ -21,4 +21,4 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: what
-        run: timeout 1s yes Samurai. | true
+        run: timeout 1s yes Samurai. || true
